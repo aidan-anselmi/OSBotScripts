@@ -15,7 +15,7 @@ import java.awt.Graphics;
 
 
  
-@ScriptManifest(name = "Miner", author = "Aidan", version = 0.1, info = "", logo = "") 
+@ScriptManifest(name = "DwarfMineClayMiner", author = "Aidan", version = 0.1, info = "", logo = "") 
 public class DwarfMineClayMiner extends Script {
  
         final String ROCK_NAME = "Clay";
@@ -38,6 +38,9 @@ public class DwarfMineClayMiner extends Script {
         @Override
         public final void onMessage(final Message message) {
             log("A message arrived in the chatbox: " + message.getMessage());
+            if(message.contains("Mon")) {
+            	sys.exit();
+            }
         }
  
         // code in loop
